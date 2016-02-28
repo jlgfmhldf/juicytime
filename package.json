@@ -96,5 +96,8 @@
     "webpack": "^1.12.9",
     "webpack-stats-logger": "^1.0.1",
     "webpack-stream": "^2.3.0"
+  },
+  "dependencies": {
+    "typish": "^0.2.3"
   }
 }

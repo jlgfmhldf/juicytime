@@ -1,0 +1,24 @@
+mixin comming-soon()
+	+b.comming-soon
+		+text
+			p.js-typed
+				.hidden
+					| Здесь скоро будет наш <nobr>веб-сайт</nobr>,
+					br
+					| а&nbsp;пока вы&nbsp;можете узнать о&nbsp;нас
+					br
+					| в&nbsp;<nobr>соц-сетях</nobr>:)
+
+		+e.links.js-typed-2
+
+			.hidden
+
+				+link('ВК', 'http://vk.com/steklofusing').comming-soon__link
+
+				+link('Одноклассники', 'https://ok.ru/juicytime').comming-soon__link
+
+				+link('Инстаграм', 'https://www.instagram.com/steklo.fusing/').comming-soon__link
+
+		+e.cat
+
+
