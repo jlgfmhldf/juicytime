@@ -1,0 +1,26 @@
+include ../text/text
+include ../center/center
+include ../link/link
+include ../page/page
+include ../justify/justify
+
+mixin index()
+	+b.index
+		+page
+
+			+center
+				+text
+					p
+						| Здесь скоро будет наш <nobr>веб-сайт</nobr>,
+						br
+						| а&nbsp;пока вы&nbsp;можете узнать о&nbsp;нас
+						br
+						| в&nbsp;<nobr>соц-сетях</nobr>:)
+
+				+justify
+
+					+link('ВК', 'http://vk.com/steklofusing')
+
+					+link('Одноклассники', 'https://ok.ru/group/52673713275022')
+
+					+link('Инстаграм', 'https://www.instagram.com/steklo.fusing/')
