@@ -9,6 +9,11 @@ $(() => {
 	const hidden = 'hidden';
 	const typeSpeed = 80;
 
+	function getRandomInt(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+
 	function typeLinks() {
 		const
 			$typed2 = $('.js-typed-2');
@@ -27,15 +32,31 @@ $(() => {
 			.wait(50);
 	}
 
-	typish($typed)
-		.speed(typeSpeed)
-		.type('Здесь скоро будет наш ')
-		.type('веб-сайт', '<nobr>')
-		.type(', а пока вы можете узнать о нас \n')
-		.type('в соц-сетях', '<nobr>')
-		.type('\n И полюбоваться на котика :)')
-		.then(function () { typeLinks(); });
+	function text1() {
+		typish($typed)
+			.speed(typeSpeed)
+			.type('Здесь скоро будет наш ')
+			.type('веб-сайт', '<nobr>')
+			.type(', а пока вы можете узнать о нас \n')
+			.type('в соц-сетях', '<nobr>')
+			.type('\n И полюбоваться на котика :)')
+			.then(function () { typeLinks(); });
+	}
 
+	function text2() {
+		typish($typed)
+			.speed(typeSpeed)
+			.type('У каждого котика должны быть усы, \n', '<nobr>')
+			.type('А у каждого дома наши часы! :)')
+			.then(function () { typeLinks(); });
+	}
+
+	function runRandomText() {
+		const number = getRandomInt(1, 2);
+		eval("text" + number)();
+	}
+
+	runRandomText();
 
 });
 
