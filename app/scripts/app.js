@@ -5,10 +5,9 @@ import $ from 'jquery';
 $(() => {
 	svg4everybody();
 
-	const
-		$typed = $('.js-typed'),
-		hidden = 'hidden',
-		typeSpeed = 80;
+	const $typed = $('.js-typed');
+	const hidden = 'hidden';
+	const typeSpeed = 80;
 
 	function typeLinks() {
 		const
@@ -25,6 +24,7 @@ $(() => {
 			.type('ВК', link('http://vk.com/steklofusing'))
 			.type('Одноклассники', link('https://ok.ru/juicytime'))
 			.type('Инстаграм', link('https://www.instagram.com/steklo.fusing/'))
+			.wait(50);
 	}
 
 	typish($typed)
@@ -34,7 +34,8 @@ $(() => {
 		.type(', а пока вы можете узнать о нас \n')
 		.type('в соц-сетях', '<nobr>')
 		.type('\n И полюбоваться на котика :)')
-		.then(function () { typeLinks() });
+		.then(function () { typeLinks(); });
 
 
 });
+
